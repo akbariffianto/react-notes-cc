@@ -1,5 +1,5 @@
 runtime: nodejs20
-service: akbar-tugas6-fe
+service: notes-frontend-akbar
 instance_class: F1
 
 handlers:
@@ -11,4 +11,5 @@ handlers:
     static_files: dist/\1
     upload: dist/(.*)
 
-default_expiration: "1h"
+  - url: /.*
+    script: auto
